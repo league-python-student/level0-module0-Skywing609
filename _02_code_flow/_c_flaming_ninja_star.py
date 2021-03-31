@@ -21,16 +21,29 @@ if __name__ == '__main__':
     flameSize = 130         # the length of the flaming arms
     
     # Make a new turtle
-    
+    blob = turtle.Turtle()
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    blob.shape('turtle')
     # Set the turtle width to 2
-    
+    blob.width(2)
     # Set the turtle speed to 0 (fastest)
-    
+    blob.speed(0)
     # Use a for loop to repeat all of the code below ONE time (we will change
     # this later)
-        
+    for i in range(90):
+        blob.pencolor('black')
+        blob.fillcolor('orange')
+        blob.begin_fill()
+        blob.right(360/8)
+        blob.forward(64)
+        blob.left(40)
+        blob.forward(flameSize)
+        blob.right(170)
+        blob.forward(flameSize)
+        blob.right(62)
+        blob.forward(baseSize)
+        blob.end_fill()
+
         # Set the turtle .fillcolor() to orange
         
         # Call the turtle .begin_fill() function
