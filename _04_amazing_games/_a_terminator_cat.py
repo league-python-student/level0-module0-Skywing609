@@ -58,12 +58,15 @@ if __name__ == '__main__':
     #    c. Rename the image something short (e.g. cat.gif)
     #    d. Save the image to your computer's desktop
     #    e. Drag and drop the image into this python package
-    
+    set_background("cat.gif")
     # 2. Call the set_background() function with your variable inside of the parenthesis
     #    for example, set_background(bg_image)
-
+    blob = turtle.Turtle()
     # 3. Make a new turtle
-
+    blob.color("purple")
+    blob.pencolor("purple")
+    blob.width(0)
+    blob.speed(0)
     # 4. Set the turtle color and pen color to red (or any color you want)
     #    using .color('red', 'red')
 
@@ -82,7 +85,7 @@ if __name__ == '__main__':
     #    and initialize them:
     #    left_eye  = Eye(eye=my_turtle, x=-34, y=11, radius=30)
     #    right_eye = Eye(eye=my_turtle, x=40, y=-5, radius=30)
-
+    #left = Eye(eye=my_turtle, x=-
     # 9. Call the .draw() method on BOTH eye variables
 
 
