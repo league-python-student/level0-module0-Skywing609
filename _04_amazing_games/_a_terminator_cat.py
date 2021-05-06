@@ -39,13 +39,16 @@ def screen_clicked(x, y):
 
 def key_pressed():
     print('You pressed the space key')
+
     
     # LASER BEAM.  This code will make your ellipse move down and to the right
     # when you press the space bar. Run the program to test it.
 
     # 10. Increment the x and y variables of the 2 eye variables by 5:
-    #     left_eye.x += 5
-    
+    left.y += 5
+    right.y -= 5
+    left.draw()
+    right.draw()
     # 11. Call the .draw() method for both eye variables.
 
 
@@ -63,8 +66,8 @@ if __name__ == '__main__':
     #    for example, set_background(bg_image)
     blob = turtle.Turtle()
     # 3. Make a new turtle
-    blob.color("purple")
-    blob.pencolor("purple")
+    blob.color("red")
+    blob.pencolor("red")
     blob.width(0)
     blob.speed(0)
     # 4. Set the turtle color and pen color to red (or any color you want)
@@ -80,7 +83,10 @@ if __name__ == '__main__':
     #    Variables for x and y have been created at the top of your sketch, 
     #    now you can set them equal to the values you just found. Watch for
     #    negative signs!
-    
+    left  = Eye(eye=blob, x=-61.0, y=-88.0)
+    right = Eye(eye=blob, x=178.0, y=-80.00)
+    left.draw()
+    right.draw()
     # 8. After you've found the x and y for the eyes create 2 eye variables
     #    and initialize them:
     #    left_eye  = Eye(eye=my_turtle, x=-34, y=11, radius=30)
