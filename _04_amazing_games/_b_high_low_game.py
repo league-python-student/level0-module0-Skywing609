@@ -17,13 +17,16 @@ if __name__ == '__main__':
         q = input("Guess a random number from 1 to 100!")
         if q == str(random_num):
             print('You win!')
+            exit()
         else:
             G -= 1
             print("you have " +str(G)+ " Guesses!")
 
         # 5. If the guess is correct
-            # 6. Win. Use 'sys.exit(0)' to end the program
+        if q > str(random_num):    # 6. Win. Use 'sys.exit(0)' to end the program
             messagebox.showinfo(None,"Too High!")
+        elif q < str(random_num):
+            messagebox.showinfo(None, "Too low!")
         # 7. if the guess is high
             # 8. Tell them it's too high
         # 9. Else if the guess is low
